@@ -25,10 +25,84 @@ const Home: React.FC = () => {
         className="w-full -mt-4"
       />
 
-      <div className="flex flex-wrap justify-between max-w-[80vw] mx-auto pt-8">
-        <ProgressBar />
-        <ProgressBar />
-        <ProgressBar />
+      <h2 className="text-center text-red-500">
+        Desktop examples with data based on the 4 images attached in the email:
+      </h2>
+      <div className="flex flex-wrap justify-evenly max-w-[90vw] mx-auto py-8">
+        <ProgressBar
+          operatorLogo="/operator-bluechip.svg"
+          providerLogo="/provider-netent.svg"
+          gameThumb="/slot-starburst.svg"
+          RTP={2.0}
+          SRP={94.5}
+          gameRTP={96.5}
+          variant="desktop"
+        />
+        <ProgressBar
+          operatorLogo="/operator-bluechip.svg"
+          providerLogo="/provider-netent.svg"
+          gameThumb="/slot-starburst.svg"
+          RTP={-10.0}
+          SRP={96.5}
+          gameRTP={86.5}
+          variant="desktop"
+        />
+        <ProgressBar
+          operatorLogo="/operator-bluechip.svg"
+          providerLogo="/provider-netent.svg"
+          gameThumb="/slot-starburst.svg"
+          RTP={10.0}
+          SRP={86.5}
+          gameRTP={96.5}
+          variant="desktop"
+        />
+        <ProgressBar
+          operatorLogo="/operator-bluechip.svg"
+          providerLogo="/provider-netent.svg"
+          gameThumb="/slot-starburst.svg"
+          RTP={-2.0}
+          SRP={96.5}
+          gameRTP={94.5}
+          variant="desktop"
+        />
+      </div>
+
+      <h2 className="text-center text-red-500">
+        Desktop examples with data based on the 2 images attached in the design
+        file:
+      </h2>
+      <div className="flex flex-wrap justify-evenly max-w-[90vw] mx-auto py-8">
+        <ProgressBar
+          operatorLogo="/operator-bluechip.svg"
+          providerLogo="/provider-netent.svg"
+          gameThumb="/slot-starburst.svg"
+          RTP={-6.8}
+          SRP={88.2}
+          gameRTP={95.0}
+          variant="desktop"
+        />
+        <ProgressBar
+          operatorLogo="/operator-bluechip.svg"
+          providerLogo="/provider-netent.svg"
+          gameThumb="/slot-crap-trap.svg"
+          RTP={13.6}
+          SRP={108.2}
+          gameRTP={95.0}
+          variant="desktop"
+        />
+      </div>
+
+      <h2 className="text-center text-red-500">Mobile examples</h2>
+      <div className="flex flex-wrap justify-between max-w-[90vw] mx-auto py-8">
+        <ProgressBar
+          operatorLogo="/operator-bluechip.svg"
+          providerLogo="/provider-netent.svg"
+          gameThumb="/slot-starburst.svg"
+          RTP={-6.8}
+          SRP={88.2}
+          gameRTP={95.0}
+          variant="mobile"
+        />
       </div>
     </>
   );
