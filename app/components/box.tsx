@@ -48,15 +48,15 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
   return (
     <>
       <div
-        className={` ${
+        className={`flex justify-center items-center flex-col rounded-3xl my-2 w-full ${
           variant === "desktop"
-            ? "bg-[#021024] w-[398px]"
+            ? "bg-[#0b1b32] md:bg-[#021024] md:w-[398px]"
             : "w-full bg-[#0b1b32]"
-        } flex justify-center items-center flex-col rounded-3xl my-2`}
+        } `}
       >
         <div
-          className={`flex flex-col justify-center w-full items-center rounded-4xl ${
-            variant === "desktop" ? "" : "bg-[#021024] pb-4"
+          className={`flex flex-col justify-center w-full items-center rounded-4xl bg-[#021024] ${
+            variant === "desktop" ? "pb-4 md:pb-0" : "bg-[#021024] pb-4"
           }`}
         >
           <div
@@ -148,7 +148,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
                 width="128"
                 height="128"
                 alt="Game Thumbnail"
-                className="absolute top-0 left-0 w-full h-full mt-6 p-4"
+                className="absolute top-0 left-0 w-full h-full mt-6 p-4 rounded-full"
               />
             </div>
             {RTP < 0 ? (
@@ -171,7 +171,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
           </div>
           <div
             className={`text-white  font-black ${
-              variant === "desktop" ? "text-4xl" : "text-2xl"
+              variant === "desktop" ? "text-2xl md:text-4xl" : "text-2xl"
             }`}
           >
             {gameRTP}%
@@ -187,7 +187,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
                 alt="Hot Face Image"
                 className="mr-1"
               />
-              RTP {RTP}%
+              RTP {RTP.toFixed(2)}%
             </div>
           ) : (
             <div className="text-base font-semibold text-[#36FCF0] flex">
@@ -198,14 +198,14 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
                 alt="Cold Face Image"
                 className="mr-1"
               />
-              RTP {RTP}%
+              RTP {RTP.toFixed(2)}%
             </div>
           )}
 
           <div
-            className={`bg-[#0B1B32] text-white w-[85%] rounded-2xl p-5 mt-4 ${
-              variant === "desktop" ? "" : "hidden"
-            }`}
+            className={`bg-[#0B1B32] text-white w-[85%] rounded-2xl p-5 mt-4 hidden ${
+              variant === "desktop" ? "md:block" : "hidden"
+            } `}
           >
             <div className="flex justify-between">
               <div className="flex items-center">
@@ -227,7 +227,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
               Difference
               <span>
                 {RTP >= 0 ? "+" : ""}
-                {RTP}%
+                {RTP.toFixed(2)}%
               </span>
             </div>
             <div className="border-t-2 border-gray-400 mt-2"></div>
@@ -245,8 +245,8 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
           </div>
         </div>
         <div
-          className={`bg-[#0B1B32] text-white w-full rounded-b-2xl p-5 capitalize ${
-            variant === "desktop" ? "hidden" : "flex justify-between"
+          className={`bg-[#0B1B32] text-white w-full rounded-b-2xl p-5 capitalize flex justify-between ${
+            variant === "desktop" ? "md:hidden" : ""
           }`}
         >
           <div className="flex flex-col justify-center ">
@@ -262,8 +262,8 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
           </div>
         </div>
         <button
-          className={`bg-[#3736FA] rounded-4xl text-white my-4 p-4 w-[85%] font-bold text-base hover:bg-indigo-600 hover:cursor-pointer ${
-            variant === "desktop" ? "" : "hidden"
+          className={`bg-[#3736FA] hidden rounded-4xl text-white my-4 p-4 w-[85%] font-bold text-base hover:bg-indigo-600 hover:cursor-pointer ${
+            variant === "desktop" ? "md:block" : "hidden"
           }`}
         >
           Play Now at Ice Casino
