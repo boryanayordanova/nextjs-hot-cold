@@ -25,7 +25,7 @@ const Home: React.FC = () => {
         className="w-full -mt-4"
       />
 
-      <h2 className="text-center text-red-500">
+      <h2 className="text-center text-2xl">
         Desktop examples with data based on the 4 images attached in the email:
       </h2>
       <div className="flex flex-wrap justify-evenly max-w-[90vw] mx-auto py-8">
@@ -67,7 +67,7 @@ const Home: React.FC = () => {
         />
       </div>
 
-      <h2 className="text-center text-red-500">
+      <h2 className="text-center text-2xl">
         Desktop examples with data based on the 2 images attached in the design
         file:
       </h2>
@@ -92,7 +92,31 @@ const Home: React.FC = () => {
         />
       </div>
 
-      <h2 className="text-center text-red-500">Mobile examples</h2>
+      <h2 className="text-center text-2xl">
+        Case below -10% stays at 100% progress examples:
+      </h2>
+      <div className="flex flex-wrap justify-evenly max-w-[90vw] mx-auto py-8">
+        <ProgressBar
+          operatorLogo="/operator-bluechip.svg"
+          providerLogo="/provider-netent.svg"
+          gameThumb="/slot-starburst.svg"
+          RTP={-16.8}
+          SRP={95.0}
+          gameRTP={78.2}
+          variant="desktop"
+        />
+        <ProgressBar
+          operatorLogo="/operator-bluechip.svg"
+          providerLogo="/provider-netent.svg"
+          gameThumb="/slot-crap-trap.svg"
+          RTP={13.6}
+          SRP={108.2}
+          gameRTP={95.0}
+          variant="desktop"
+        />
+      </div>
+
+      <h2 className="text-center text-2xl">Mobile examples:</h2>
       <div className="flex flex-wrap justify-between max-w-[90vw] mx-auto py-8">
         <ProgressBar
           operatorLogo="/operator-bluechip.svg"
@@ -100,6 +124,15 @@ const Home: React.FC = () => {
           gameThumb="/slot-starburst.svg"
           RTP={-6.8}
           SRP={88.2}
+          gameRTP={95.0}
+          variant="mobile"
+        />
+        <ProgressBar
+          operatorLogo="/operator-bluechip.svg"
+          providerLogo="/provider-netent.svg"
+          gameThumb="/slot-crap-trap.svg"
+          RTP={13.6}
+          SRP={108.2}
           gameRTP={95.0}
           variant="mobile"
         />
