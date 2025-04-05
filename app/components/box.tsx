@@ -61,7 +61,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
         >
           <div
             className={` text-white flex justify-between w-full px-3 pt-3 ${
-              variant === "desktop" ? "" : "hidden"
+              variant === "desktop" ? "hidden md:flex" : "hidden"
             }`}
           >
             <div className="flex w-1/2 items-center">
